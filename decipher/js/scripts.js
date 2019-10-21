@@ -1,7 +1,7 @@
 var userInput = prompt("Where do you live?");
 var input0 = userInput.charAt(0).toUpperCase();
 var inputLast = userInput.charAt(userInput.length-1).toUpperCase();
-alert(userInput + " " + inputLast + input0);
+// alert(userInput + " " + inputLast + input0);
 
 function reverseString(userInput) {
     // Step 1. Use the split() method to return a new array
@@ -20,7 +20,14 @@ function reverseString(userInput) {
     return joinArray; // "olleh"
 }
 
-// function reverseString(userInput) {
-//    return userInput;
-// }
-alert(reverseString(userInput));
+// alert(reverseString(userInput));
+
+function letterAt(userInput) {
+  var charCount = userInput.length - 1;
+  var half = charCount / 2;
+  return userInput.charAt(half);
+}
+
+alert(userInput.length);
+
+alert("middle letter: " + letterAt(userInput) + " original input: " + userInput + " last and first letters: " + inputLast + input0 + " input reversed: " + reverseString(userInput));
